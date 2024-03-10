@@ -8,28 +8,7 @@ const NavBar = () => {
   const {user} = useContext(userContext);
   
   return (
-      // <nav className="header_nav">
-      //   <ul className="nav_menu">
-      //     <li>
-      //       <Link to="/" className="nav_menu_li">Home</Link>
-      //     </li>
-          
-        
-      //     <li>
-      //       <Link to="/estilos" className='nav_menu_li'>Catalogo</Link>
-      //     </li>
-      //     {user ?
-      //     <li>
-      //       <Link to="/logout" className="nav_menu_li" >Logout</Link>
-      //     </li>:
-      //         <li>
-      //         <Link to="/login" className="nav_menu_li">Login</Link>
-      //       </li>}
-      //     <li>
-      //       <Link to="/contacto" className="nav_menu_li">Contacto</Link>
-      //     </li>
-      //   </ul>
-      // </nav>
+   
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
