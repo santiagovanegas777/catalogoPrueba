@@ -7,7 +7,7 @@ import Home from "./components/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
 import Login from "./components/Login/Login";
 import Contacto from "./components/Contacto/Contacto";
-import Footer from "./components/Footer/Footer";
+
 
 import NotFound from "./components/NotFound";
 import Registro from "./components/Registro/Registro";
@@ -29,6 +29,7 @@ import Admin from './components/Admin/Admin';
 import AdminPost from "./components/Admin/Post/AdminPost";
 import AdminUsers from  "./components/Admin/AdminUsers/AdminUsers"
 import { useNavigate } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
