@@ -1,25 +1,47 @@
+ import axios from 'axios';
 import {useEffect, useState} from 'react';
-  // import '../../styles/Actividades/Actividades.css';
-import ListEstilos from './ListEstilos';
-
-
+ import { Link } from "react-router-dom";
+ //import '../../styles/Actividades/Actividades.css';
+//import ListEstilos from './ListEstilos';
+import Card from './Card';
+ import Pagination from '../Pagination/Pagination';
+import '../../styles/Actividades/ListActividades.css'
 const Estilos = () => {
   const [estilos, setEstilos] = useState([]);
+  const [actualPage, setActualPage] = useState(1);
+  
 
-  const getDataAPI = async ()=>{
-      const response = await fetch('https://api-unas.vercel.app/estilos/');
-      const res = await response.json();
-      setEstilos(res);
+  const getDataAPI = async (actualPage)=>{
+      const response = await axios(`https://api-unas.vercel.app/estilos?page=${actualPage}`);
+     
+      setEstilos(response.data.estilos);
+       console.log(response.data.estilos);
   }
-  useEffect(() => {
-    getDataAPI();
-  },[]);
 
-  return (
-    <div className='section_estilos'>
-      <ListEstilos estilos = {estilos} />
-    </div>
-  )
+  const renderList = () => {
+    return estilos.map((estilo) => {
+        return (<li key={estilo._id} >
+            <Link to={"/estilos/" + estilo._id}style={{ textDecoration: "none" }}>
+                <Card itemm={estilo} className="article_activity" />
+            </Link>
+        </li >)
+    })
 }
+useEffect(() => {
+  getDataAPI(actualPage);
+}, [actualPage])
+//  se va a ejecutar cada vez que cambie la variable actualPage
+return (
+    <>
+        
+        <Pagination setActualPage={setActualPage} actualPage={actualPage} />
+        <ul>
+            {renderList()}
+        </ul>
+    </>
+)
+
+}
+
 
 export default Estilos

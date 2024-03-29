@@ -13,7 +13,9 @@ const DetalleEstilos = () => {
   
       // const findDestination = await axios.get(`https://api-node-viajes.vercel.app/destinations/id/${idactividad}`);
       const response = await fetch(`https://api-unas.vercel.app/estilos/id/${idEstilo}`);
+      console.log(response);
       const findEstilo = await response.json();
+    
   
       console.log(findEstilo[0]);
       setEstilo(findEstilo[0]);
