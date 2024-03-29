@@ -30,6 +30,11 @@ const Footer = () => {
           </Link>
         </li>
         
+        <li>
+          <Link className="footer_list_element" to="/contacto">
+            Contacto
+          </Link>
+        </li>
         
         <li>
           <Link className="footer_list_element" to="/about">
@@ -41,11 +46,7 @@ const Footer = () => {
             Términos y condiciones
           </Link>
         </li>
-        <li>
-          <Link className="footer_list_element" to="/contacto">
-            Contacto
-          </Link>
-        </li>
+        
       </ul>
       
       <p className="footer_text">

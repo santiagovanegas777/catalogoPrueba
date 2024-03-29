@@ -1,0 +1,40 @@
+.imgCarrousel {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 375px) {
+  .imgCarrousel {
+    width: 100%;
+    height: 557px;
+  }
+}
+@media (min-width: 425px) {
+  .imgCarrousel {
+    width: 100%;
+    height: 559px;
+  }
+}
+@media (min-width: 768px) {
+  .imgCarrousel {
+    width: 100%;
+    height: 558px;
+  }
+}
+@media (min-width: 1024px) {
+  .imgCarrousel {
+    width: 100%;
+    height: 757px;
+  }
+}
+@media (min-width: 1440px) {
+  .imgCarrousel {
+    width: 100%;
+    height: 823px;
+  }
+}
+@media (min-width: 2560px) {
+  .imgCarrousel {
+    width: 100%;
+    height: 1673px;
+  }
+}/*# sourceMappingURL=carrousel.css.map */

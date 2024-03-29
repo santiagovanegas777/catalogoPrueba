@@ -14,7 +14,6 @@ import Registro from "./components/Registro/Registro";
 import AuthRoute from "./components/AuthRoute/AuthRoute";
 import Profile from "./components/Profile/Profile";
 import Logout from "./components/Logout";
-import Carrousel from "./components/Carrousel/Carrousel";
 
 import Estilos from "./components/Actividades/Estilos";
 import DetalleEstilos from "./components/Actividades/DetalleEstilos";
@@ -77,7 +76,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/carrousel" element={<Carrousel />} />
+         
           <Route
             path="/login"
             element={<Login loginUser={loginUser} loginError={loginError} />}

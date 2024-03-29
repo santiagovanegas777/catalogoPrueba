@@ -26,7 +26,7 @@ const DetalleEstilos = () => {
     if(estilo){
       return (
         <>
-      <div className="actividad-imageContainer">
+      <div className="actividad-imageContainerDetail">
             <img
               src={estilo.estiloImg}
               alt={estilo.estiloPlace}

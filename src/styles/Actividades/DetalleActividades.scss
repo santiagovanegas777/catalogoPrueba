@@ -1,13 +1,37 @@
-.actividad-imageContainer {
+.actividad-imageContainerDetail {
   margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   img {
-    width: 35%;
+    width: 100%;
     height: auto;
     object-fit: cover;
+    @media (min-width: 375px) {
+      width: 75%;
+      height: 523px;
+    }
+    @media (min-width: 425px) {
+      width: 73%;
+      height: 530px;
+    }
+    @media (min-width: 768px) {
+      width: 40%;
+      height: 503px;
+    }
+    @media (min-width: 1024px) {
+      width: 50%;
+      height: 700px;
+    }
+    @media (min-width: 1440px) {
+      width: 50%;
+      height: 730px;
+    }
+    @media (min-width: 2560px) {
+      width: 54%;
+      height: 1559px;
+    }
   }
 }
 
@@ -30,4 +54,3 @@
     color: #ff0000;
   }
 }
-
