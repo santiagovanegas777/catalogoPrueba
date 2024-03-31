@@ -29,6 +29,7 @@ import AdminPost from "./components/Admin/Post/AdminPost";
 import AdminUsers from  "./components/Admin/AdminUsers/AdminUsers"
 import { useNavigate } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+ import Filtro from "./components/Shared/Filtro";
 
 
 function App() {
@@ -90,7 +91,10 @@ function App() {
           <Route path="/estilos/:idEstilo" element={
           <AuthRoute user={user} component={<DetalleEstilos user={user}/>} />
           } />
-          
+          <Route path="/filtro" element={
+          <AuthRoute user={user} component={<Filtro user={user}/>} />
+          } />
+         
 
           <Route path="/register" element={<Registro />} />
           <Route path="/contacto" element={<Contacto />} />

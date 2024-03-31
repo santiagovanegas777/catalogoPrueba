@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom'
 import userContext from '../Context/userContext';
 import { useContext } from 'react';
 
+// import Imput from '../Shared/Share';
+
+
 const NavBar = () => {
 
   const {user} = useContext(userContext);
@@ -32,6 +35,9 @@ const NavBar = () => {
             <li class="nav-item">
         <Link to="/contacto" class="nav-link">Contacto</Link>
         </li>
+        <li class="nav-item">
+        <Link to="filtro" class="nav-link active"  >Categorias</Link>
+        </li>
         <li class="nav-item dropdown">
           <li class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <p>{user != null ? user.username : "Account"}</p>
@@ -47,8 +53,11 @@ const NavBar = () => {
        
       </ul>
       {/* <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <Imput class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+    
+         <button class="btn btn-outline-success" 
+    
+        type="submit">Search</button> 
       </form> */}
     </div>
   </div>

@@ -6,9 +6,12 @@ import {useEffect, useState} from 'react';
 import Card from './Card';
  import Pagination from '../Pagination/Pagination';
 import '../../styles/Actividades/ListActividades.css'
+
+
 const Estilos = () => {
   const [estilos, setEstilos] = useState([]);
   const [actualPage, setActualPage] = useState(1);
+ 
   
 
   const getDataAPI = async (actualPage)=>{
@@ -16,6 +19,8 @@ const Estilos = () => {
      
       setEstilos(response.data.estilos);
        console.log(response.data.estilos);
+
+       
   }
 
   const renderList = () => {
@@ -24,7 +29,8 @@ const Estilos = () => {
             <Link to={"/estilos/" + estilo._id}style={{ textDecoration: "none" }}>
                 <Card itemm={estilo} className="article_activity" />
             </Link>
-        </li >)
+        </li>
+        )
     })
 }
 useEffect(() => {
@@ -35,6 +41,8 @@ return (
     <>
         
         <Pagination setActualPage={setActualPage} actualPage={actualPage} />
+       
+      
         <ul>
             {renderList()}
         </ul>
