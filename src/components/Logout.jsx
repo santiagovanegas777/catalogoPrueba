@@ -12,7 +12,7 @@ const Logout = ({setUser}) => {
     }, []);
 
   return (
-    <h1>Hasta la vista baby</h1>
+    <h1>Adios vuelve pronto</h1>
   )
 }
 

@@ -1,3 +1,5 @@
+import "../../styles/Pagination/Pagination.css"
+
 function Pagination({ setActualPage, actualPage }) {
 
 
@@ -15,9 +17,9 @@ function Pagination({ setActualPage, actualPage }) {
         <div>
             {/*actualPage > 1 ? <button onClick={handlerPrev}> anterior</button> : null*/}
 
-            <button onClick={handlerPrev} className={actualPage === 1 ? 'hidden' : ''}> anterior</button>
+            <button onClick={handlerPrev} className={actualPage === 1 ? 'hidden' : 'buttonPagination'}> anterior</button>
             {/* Hacer la validacion de siguiente para que no sobrepase el numero total de paginas*/}
-            <button onClick={handlerNext}> siguiente</button>
+            <button onClick={handlerNext}className={actualPage === 9 ? 'hidden' : 'buttonPagination'}> siguiente</button>
         </div>
     )
 

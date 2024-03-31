@@ -40,12 +40,13 @@ useEffect(() => {
 return (
     <>
         
-        <Pagination setActualPage={setActualPage} actualPage={actualPage} />
+      
        
       
         <ul>
             {renderList()}
         </ul>
+        <Pagination setActualPage={setActualPage} actualPage={actualPage} />
     </>
 )
 

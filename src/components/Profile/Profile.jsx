@@ -16,7 +16,7 @@ const Profile = () => {
     const updateDataUsersAPI = async () => {
       console.log(sessionToken);
       console.log(user);
-      const response = await fetch(`https://api-pf-iota.vercel.app/users/update/${user._id}`, {
+      const response = await fetch(`https://api-unas.vercel.app/users/update/${user._id}`, {
         method: "PUT",
         headers: {
           Accept: 'application/json',
@@ -34,7 +34,7 @@ const Profile = () => {
       });
       const res = await response.json();
       console.log(res);
-      //alert('Datos actualizados')
+      alert('Datos actualizados')
     };
 
 
@@ -70,6 +70,8 @@ const Profile = () => {
               onChange={changeInput}
               value={user.email}
             />
+            
+            
             <label htmlFor="username">Nombre de usuario</label>
             <input
               className="register-input-nombre"
@@ -143,8 +145,7 @@ const Profile = () => {
 
           <hr />
          
-          <div className="login-div-titulo">Regístrate con nosotros!</div>
-            <hr />
+        
        
         </div>
       </div>
